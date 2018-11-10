@@ -7,7 +7,7 @@ import './layout.scss';
 
 const Layout = (props) => (
   <div className="flex flex-col" style={{minHeight: '100vh'}}>
-    <div className="sh-header flex-initial shadow-md">
+    <div className="sh-header flex-initial p-5 lg:p-10">
       <nav>
         <Link to="/">
           <img style={{ height: 50, marginRight: 20 }} src={logo} alt="{.sh}" />
@@ -20,15 +20,15 @@ const Layout = (props) => (
         </Link>
       </nav>
     </div>
-    <div className="sh-container flex-grow">
+    <div className="sh-container flex-grow p-5 lg:p-10">
       <div className="flex">
-        <div className="w-2/3 mx-auto">
+        <div className="w-full mx-auto">
           {props.children}
         </div>
       </div>
     </div>
-    
-    <div className="sh-footer flex-initial flex">
+
+    <div className="sh-footer flex-initial flex p-5 lg:p-10">
       <div>
         Find me online at
         <div className="mt-1">
@@ -46,7 +46,7 @@ const Layout = (props) => (
         </div>
       </div>
     </div>
-    
+
 
   </div>
 

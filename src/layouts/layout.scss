@@ -5,11 +5,15 @@ a {
 }
 
 .sh-header {
-  padding: 50px;
+  // padding: 50px;
+
+  a {
+    height: 0px;
+  }
 
   &__nav {
     position: relative;
-    bottom: 22px;
+    bottom: 15px;
     text-decoration: none;
     transition: all 1s;
     color: black;
@@ -29,7 +33,7 @@ a {
 }
 
 .sh-footer {
-  padding: 50px;
+  // padding: 50px;
 
   &__nav {
     text-decoration: none;
@@ -54,9 +58,9 @@ a {
 
 
 .sh-container {
-  padding: 20px;
+  // padding: 50px;
   border-top: 0px solid black;
-  border-bottom: 5px solid black;
+  border-bottom: 0px solid black;
 }
 
 .text-purple {

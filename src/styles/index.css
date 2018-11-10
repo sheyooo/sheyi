@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: 500;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind preflight;
+@tailwind utilities;
+
+
+/* Your custom CSS here */

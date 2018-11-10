@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="263px" height="197px" viewBox="0 0 263 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2" transform="translate(-7.000000, -62.000000)">
+            <rect id="Rectangle" x="8" y="38" width="261" height="261"></rect>
+            <text id=".sh" fill="#663399" font-family="SourceSansPro-SemiBold, Source Sans Pro" font-size="137" font-weight="500" line-spacing="214">
+                <tspan x="52" y="181">.sh</tspan>
+            </text>
+            <g id="braces" fill="#663399" font-family="SourceSansPro-Light, Source Sans Pro" font-size="228" font-weight="300">
+                <text id="{">
+                    <tspan x="0" y="224">{</tspan>
+                </text>
+                <text id="}">
+                    <tspan x="214" y="224">}</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -8,6 +8,13 @@ a:hover {
   color: rebeccapurple;
 }
 
+@media only screen and (max-width: 500px) {
+  .page-head {
+    font-size: 1.2em;
+  }
+
+}
+
 .sh-container {
   // padding: 50px;
   border-top: 0px solid black;

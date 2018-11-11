@@ -47,6 +47,14 @@
     position: fixed;
   }
 
+  &.full-screen &__description {
+    overflow: initial;
+  }
+
+  &.full-screen &__technologies {
+    display: initial;
+  }
+
   &.full-screen &__technologies div {
     justify-content: center;
   }
@@ -64,6 +72,7 @@
   &__technologies {
     // border-top: #000 solid 2px;
     padding-top: 20px;
+    display: none;
     // font-size: 16px;
   }
 

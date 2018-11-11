@@ -39,5 +39,8 @@
     "autoprefixer": "^9.3.1",
     "postcss-cli": "^6.0.1",
     "react-snap": "^1.19.0"
+  },
+  "engines": {
+    "node": "10.11.0"
   }
 }

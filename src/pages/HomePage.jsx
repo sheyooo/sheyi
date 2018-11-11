@@ -1,5 +1,6 @@
 import React from 'react';
-import Typed from 'typed.js';
+// eslint-disable-next-line
+// import Typed from 'typed.js';
 import { Link } from 'react-router-dom';
 
 import Layout from './../layouts/Layout';
@@ -8,7 +9,7 @@ import picture from './../assets/professional-picture.jpg';
 
 export default class HomePage extends React.Component {
 
-  typed = null;
+  // typed = null;
 
   componentDidMount() {
     // this.typed = new Typed('#typed', {
@@ -38,7 +39,7 @@ export default class HomePage extends React.Component {
       }
     };
     return (
-      <Layout pageName="">
+      <Layout>
         <div className="w-full md:w-3/5">
           {/* <div className="mb-5" style={styles.heroText}>
             <p className="inline-block" id="typed" style={styles.heroText}></p>
@@ -58,7 +59,10 @@ export default class HomePage extends React.Component {
           
         </div>
         <div className="hidden md:flex flex-grow justify-end items-start">
-          {/* <img className="w-1/3" src={picture} alt="Seyi Adekoya"/> */}
+          <div className="w-1/3 flex-no-grow">
+
+            <img src={picture} alt="Seyi Adekoya"/>
+          </div>
           <div className="flex flex-col items-end ml-10">
             <span style={{fontSize: 21}}>HOME</span>
             <span style={{fontSize: 50}}>➝</span>

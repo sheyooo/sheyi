@@ -1,7 +1,7 @@
 import React from 'react';
 import WOW from 'wow.js';
 
-import Layout from './../layouts/Layout.jsx';
+import Layout from './../layouts/Layout';
 
 export default class ProjectsPage extends React.Component {
 

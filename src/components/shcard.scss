@@ -1,0 +1,73 @@
+@keyframes toFullScreen {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1,1);
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+
+.projects-card {
+  box-shadow: 0px 0px 0px #333;
+  border: solid 2px black;
+  background: white;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 5px -5px 0px #333;
+    transform: translate(-5px, 5px);
+  }
+
+  &:hover.full-screen {
+    box-shadow: none;
+    transform: none;
+    cursor: default;
+  }
+
+  &.full-screen {
+    animation-name: toFullScreen;
+    animation-duration: 0.1s;
+    animation-fill-mode: both;
+
+    text-align: center;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+  }
+
+  &.full-screen &__technologies div {
+    justify-content: center;
+  }
+
+  &__divider {
+    border-top: #000 solid 2px;
+    width: auto;
+  }
+
+  &__description {
+    // border-top: #000 solid 2px;
+    font-size: 20px;
+  }
+
+  &__technologies {
+    // border-top: #000 solid 2px;
+    padding-top: 20px;
+    // font-size: 16px;
+  }
+
+  &__description::selection {
+    user-select: none;
+  }
+}

@@ -6086,6 +6086,10 @@ table {
   width: 83.33333%;
 }
 
+.w-1\/12 {
+  width: 8.33333%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -6123,6 +6127,22 @@ table {
 }
 
 /* Your custom CSS here */
+
+.hero-text {
+  font-size: 35px;
+  line-height: 90px;
+}
+
+.sub-hero-text {
+  font-size: 28px;
+  line-height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-text {
+    line-height: 60px;
+  }
+}
 
 @media (min-width: 576px) {
   .sm\:list-reset {
@@ -11684,6 +11704,10 @@ table {
 
   .sm\:w-5\/6 {
     width: 83.33333%;
+  }
+
+  .sm\:w-1\/12 {
+    width: 8.33333%;
   }
 
   .sm\:w-full {
@@ -17285,6 +17309,10 @@ table {
     width: 83.33333%;
   }
 
+  .md\:w-1\/12 {
+    width: 8.33333%;
+  }
+
   .md\:w-full {
     width: 100%;
   }
@@ -22884,6 +22912,10 @@ table {
     width: 83.33333%;
   }
 
+  .lg\:w-1\/12 {
+    width: 8.33333%;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
@@ -28481,6 +28513,10 @@ table {
 
   .xl\:w-5\/6 {
     width: 83.33333%;
+  }
+
+  .xl\:w-1\/12 {
+    width: 8.33333%;
   }
 
   .xl\:w-full {

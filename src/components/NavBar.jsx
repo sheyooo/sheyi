@@ -12,14 +12,22 @@ export default () => (
         <img style={{ height: 50, marginRight: 20 }} src={logo} alt="{.sh}" />
       </NavLink>
       <NavLink exact className="hidden sm:inline-block sh-header__nav" to="/">
-        HOME
+        Home
+      </NavLink>
+      <NavLink exact className="hidden sm:inline-block sh-header__nav" to="/about">
+        About
       </NavLink>
       <NavLink className="hidden sm:inline-block sh-header__nav" to="/projects">
-        PROJECTS
+        Projects
       </NavLink>
       {/* <NavLink className="sh-header__nav" to="/resume">
         RESUMÉ
       </NavLink> */}
+
+      {/* <NavLink className="sh-header__nav" to="/next">
+        ->
+      </NavLink> */}
+
     </nav>
   </div>
 );

@@ -1,6 +1,10 @@
 // MAKE CONSCIOUS EFFORT TO USE BEM CSS
 
 a {
+  color: #000;
+}
+
+a:hover {
   color: rebeccapurple;
 }
 
@@ -17,10 +21,10 @@ a {
 .name-in-bio {
   position: relative;
   font-weight: bolder;
-  text-decoration: none;
+  // text-decoration: none;
   text-align: center;
   height: auto;
-  color: rebeccapurple;
+  // color: rebeccapurple;
 
   span:nth-child(2) {
     opacity: 0;

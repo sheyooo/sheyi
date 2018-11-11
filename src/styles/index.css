@@ -16,3 +16,19 @@ body {
 
 
 /* Your custom CSS here */
+
+.hero-text {
+  font-size: 35px;
+  line-height: 90px
+}
+
+.sub-hero-text {
+  font-size: 28px;
+  line-height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-text {
+    line-height: 60px
+  }
+}

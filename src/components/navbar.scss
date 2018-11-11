@@ -24,6 +24,7 @@
 
   &__nav:hover {
     font-weight: bolder;
+    color: #000;
   }
 
   &__nav::before { content: '{'; }

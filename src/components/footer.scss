@@ -1,0 +1,22 @@
+.sh-footer {
+  // padding: 50px;
+
+  &__nav {
+    text-decoration: none;
+    transition: all 1s;
+    color: black;
+  }
+
+  &__nav::before, &__nav::after {
+    font-weight: 900;
+    opacity: 0;
+  }
+
+  &__nav::before { content: '{ '; }
+
+  &__nav::after { content: ' }'; }
+
+  &__nav:hover::before, &__nav:hover::after  {
+    opacity: 1;
+  }
+}

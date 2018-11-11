@@ -5,23 +5,13 @@ import { List as ListLoader } from 'react-content-loader';
 
 export default class ResumePage extends React.Component {
 
-  componentDidMount() {
-  }
-
-  componentWillUnmount() {
-  }
-
-  pdfLoaded = (e) => {
-    console.log(e, 'jkjh');
-  }
-
   render() {
     let resumeGoogleDoc = 'https://docs.google.com/document/d/1oVbp1YblW_0vtzTRcFvbKOEOGwT_q5j8xmsPBacCQGg/export?format=pdf&attachment=false';
     return (
       <Layout>
         <ListLoader className="w-full absolute" />
 
-        <object className="w-full z-10" style={{height: '100vh'}} onLoadCapture={this.pdfLoaded} data={resumeGoogleDoc} type="application/pdf">
+        <object className="w-full z-10" style={{height: '100vh'}} data={resumeGoogleDoc} type="application/pdf">
           Download my resume <a href={resumeGoogleDoc}>test.pdf</a>
         </object>
 

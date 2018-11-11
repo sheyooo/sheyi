@@ -16,10 +16,10 @@ export default class ProjectsPage extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout pageName="Projects">
         <div className="lg:w-1/2 sm:w-full">
           <h1 className="wow fadeInTop">
-            Projects
+            PROJECTS
           </h1>
 
           <div className="flex w-full">

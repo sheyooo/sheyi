@@ -9,20 +9,30 @@
     position: relative;
     bottom: 18px;
     text-decoration: none;
-    transition: all 1s;
     color: black;
+    margin: 20px;
+    font-size: 30px;
+
+    &:first-of-type {
+      margin: 0px;
+    }
   }
 
   &__nav::before, &__nav::after {
     opacity: 0;
   }
 
-  &__nav::before { content: '{ '; }
+  &__nav:hover {
+    font-weight: bolder;
+  }
 
-  &__nav::after { content: ' }'; }
+  &__nav::before { content: '{'; }
+
+  &__nav::after { content: '}'; }
 
   &__nav:hover::before, &__nav:hover::after  {
-    opacity: 1;
+    // opacity: 1;
+    // font-weight: bolder;
   }
 
   &__nav.active {

@@ -9,7 +9,8 @@ const Layout = (props) => (
   <div className="flex flex-col" style={{minHeight: '100vh'}}>
     <NavBar />
 
-    <div className="sh-container flex-grow p-5 lg:p-10">
+    <div className="sh-container flex-grow p-5 pt-0 lg:p-10 lg:pt-0">
+      <h2 className="mb-10 mr-10 inline-block" style={{fontWeight: 'lighter'}}>➝ {props.pageName || 'Hi there 👋🏾'}</h2>
       <div className="flex w-full mx-auto relative">
         {props.children}
       </div>

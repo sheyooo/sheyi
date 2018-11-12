@@ -6157,6 +6157,15 @@ table {
           animation-duration: 1s;
 }
 
+.myFadeInLeft {
+  -webkit-animation-name: myFadeInLeft;
+          animation-name: myFadeInLeft;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
 @-webkit-keyframes blinkingCursor {
   0% {
     opacity: 0;
@@ -6182,6 +6191,34 @@ table {
 
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes myFadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+            transform: translate3d(-10%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+}
+
+@keyframes myFadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+            transform: translate3d(-10%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
   }
 }
 

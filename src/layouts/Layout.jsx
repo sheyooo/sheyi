@@ -23,7 +23,7 @@ const Layout = (props) => (
       <div className="flex w-full mx-auto relative">
         {props.children}
         <div className="hidden md:flex flex-grow justify-end items-start">
-          <div className="flex flex-col items-end ml-10">
+          <div className="wow myFadeInLeft flex flex-col items-end ml-10">
             <NavLink to="/home" style={styles.link}>HOME</NavLink>
             <span style={{fontSize: 30}}>➝</span>
             <NavLink to="/about" style={styles.Layout}>ABOUT</NavLink>

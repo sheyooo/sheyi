@@ -29,7 +29,7 @@
 
   &:hover.full-screen {
     box-shadow: none;
-    transform: none;
+    transform: translate(0px, 0px);
     cursor: default;
   }
 
@@ -44,6 +44,7 @@
     top: 0px;
     left: 0px;
     position: fixed;
+    overflow: scroll;
     z-index: 100;
   }
 

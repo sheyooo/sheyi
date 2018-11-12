@@ -32,3 +32,13 @@ body {
     line-height: 60px
   }
 }
+
+@keyframes blinkingCursor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

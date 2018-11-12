@@ -33,6 +33,14 @@ body {
   }
 }
 
+.blinkingCursor {
+  animation-name: blinkingCursor;
+  animation-timing-function: step-end;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
 @keyframes blinkingCursor {
   0% {
     opacity: 0;
@@ -40,5 +48,9 @@ body {
 
   50% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

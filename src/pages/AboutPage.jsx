@@ -20,7 +20,7 @@ export default class AboutPage extends React.Component {
         <span className="name-in-bio inline-flex mr-5">
           <span style={styles.spanTerminal}>
             <code>$ whoami</code>
-            <code style={{animationName: 'blinkingCursor', animationTimingFunction: 'step-end', verticalAlign: 'middle'}} className="animated fadeIn infinite">█</code>
+            <code style={{verticalAlign: 'middle'}} className="blinkingCursor">█</code>
             &nbsp;
           </span>
           <span>Who Am I?</span>

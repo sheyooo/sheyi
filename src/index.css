@@ -6144,6 +6144,19 @@ table {
   }
 }
 
+.blinkingCursor {
+  -webkit-animation-name: blinkingCursor;
+          animation-name: blinkingCursor;
+  -webkit-animation-timing-function: step-end;
+          animation-timing-function: step-end;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
 @-webkit-keyframes blinkingCursor {
   0% {
     opacity: 0;
@@ -6151,6 +6164,10 @@ table {
 
   50% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
@@ -6161,6 +6178,10 @@ table {
 
   50% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 

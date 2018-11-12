@@ -4,7 +4,7 @@ import './footer.scss';
 
 export default () => (
   <div className="sh-footer flex-initial flex-wrap flex p-5 lg:p-10">
-    <div className="flex-initial w-full sm:w-1/3 md:w-1/3 lg:w-1/4">
+    <div className="flex-initial w-full sm:w-2/3 md:w-3/5 lg:w-2/5 xl:w-1/4">
       Let's connect
       <div className="flex mt-1">
         <a className="flex-1 mr-2" href="https://github.com/sheyooo" target="_blank" rel="noopener noreferrer">

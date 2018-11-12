@@ -22,16 +22,19 @@
   transition: all 0.2s;
   cursor: pointer;
 
-  &:hover {
-    box-shadow: 10px -10px 0px #333;
-    transform: translate(-10px, 10px);
+  @media only screen and (min-width: 768px) {
+    &:hover {
+      box-shadow: 10px -10px 0px #333;
+      transform: translate(-10px, 10px);
+    }
+
+    &:hover.full-screen {
+      box-shadow: none;
+      transform: translate(0px, 0px);
+      cursor: default;
+    }
   }
 
-  &:hover.full-screen {
-    box-shadow: none;
-    transform: translate(0px, 0px);
-    cursor: default;
-  }
 
   &.full-screen {
     animation-name: toFullScreen;

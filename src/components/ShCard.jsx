@@ -1,4 +1,5 @@
 import React from 'react';
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 
 import './shcard.scss';
 
@@ -9,21 +10,24 @@ export default class ShCard extends React.Component {
   constructor(props) {
     super(props);
 
-    // props.companyName
-    // props.companyLocation
-    // props.role
-    // props.timeline
-    // props.description
-    // props.technologies
-
     this.state = {
       isFullScreen: false
     }
   }
 
+  componentWillUnmount() {
+    clearAllBodyScrollLocks();
+  }
+
   handleClick = () => {
     this.setState({
       isFullScreen: !this.state.isFullScreen
+    }, () => {
+      if (this.state.isFullScreen) {
+        disableBodyScroll();
+      } else {
+        clearAllBodyScrollLocks();
+      }
     });
   }
 
@@ -34,7 +38,7 @@ export default class ShCard extends React.Component {
 
     if (this.state.isFullScreen) {
       containerClass += ' full-screen';
-      iconContainerClass = 'w-1/4 sm:w-1/6 md:w-1/12';
+      // iconContainerClass = 'w-1/4 sm:w-1/6 md:w-1/12';
     }
 
     return (

@@ -23,8 +23,8 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: 5px -5px 0px #333;
-    transform: translate(-5px, 5px);
+    box-shadow: 10px -10px 0px #333;
+    transform: translate(-10px, 10px);
   }
 
   &:hover.full-screen {
@@ -39,12 +39,24 @@
     animation-fill-mode: both;
 
     text-align: center;
-    opacity: 0;
     width: 100vw;
     height: 100vh;
     top: 0px;
     left: 0px;
     position: fixed;
+    z-index: 100;
+  }
+
+  @media only screen and (min-width: 600px) {
+    &.full-screen &__description {
+      width: 30%;
+      margin: 0 auto;
+    }
+  
+    &.full-screen &__technologies {
+      width: 30%;
+      margin: 0 auto;
+    }
   }
 
   &.full-screen &__description {

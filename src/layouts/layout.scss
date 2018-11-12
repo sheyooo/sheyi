@@ -1,18 +1,22 @@
-// MAKE CONSCIOUS EFFORT TO USE BEM CSS
-
 a {
   color: #000;
+  text-decoration-style: double;
 }
 
 a:hover {
   color: rebeccapurple;
 }
 
+a::selection, p::selection {
+  background: #000;
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
 @media only screen and (max-width: 500px) {
   .page-head {
     font-size: 1.2em;
   }
-
 }
 
 .sh-container {

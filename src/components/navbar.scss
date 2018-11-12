@@ -9,7 +9,7 @@
     position: relative;
     bottom: 18px;
     text-decoration: none;
-    color: black;
+    color: #333;
     margin: 20px;
     font-size: 30px;
 
@@ -23,8 +23,8 @@
   }
 
   &__nav:hover {
-    font-weight: bolder;
-    color: #000;
+    // font-weight: bolder;
+    color: #333;
   }
 
   &__nav::before { content: '{'; }
@@ -37,7 +37,7 @@
   }
 
   &__nav.active {
-    font-weight: bolder;
+    // font-weight: bolder;
     &::before, &::after {
       opacity: 1;
     }

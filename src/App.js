@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import {Scro} from 'react-router';
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet';
 
@@ -12,6 +13,20 @@ import ResumePage from './pages/ResumePage';
 
 import './App.css';
 
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  render() {
+    return null;
+  }
+}
+
+ScrollToTop = withRouter(ScrollToTop);
+
 class App extends Component {
 
   componentDidMount() {
@@ -21,12 +36,14 @@ class App extends Component {
   render() {
     return (
       <Router>
+
         <div>
+          <ScrollToTop />
           <Helmet>
             <title>Seyi Adekoya - Full Stack Engineer</title>
           </Helmet>
 
-          <Switch>
+          <Switch >
             <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/projects" component={ProjectsPage} />
@@ -34,6 +51,8 @@ class App extends Component {
             <Route component={HomePage} />
           </Switch>
         </div>
+        {/* </ScrollToTop> */}
+
       </Router>
     );
   }

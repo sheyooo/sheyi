@@ -1,5 +1,7 @@
 import React from 'react';
 
+// BEGIN: TECHNOLOGIES
+
 import js from './../assets/technologies/js.svg';
 import nodejs from './../assets/technologies/nodejs.svg';
 import mongodb from './../assets/technologies/mongodb.svg';
@@ -35,6 +37,21 @@ import jest from './../assets/technologies/jest.svg';
 import protactor from './../assets/technologies/protactor.svg';
 import karma from './../assets/technologies/karma.svg';
 
+// END: TECHNOLOGIES
+
+
+// BEGIN: ICONS
+
+import arrowDown from './../assets/icons/arrow-down.svg';
+import minimize from './../assets/icons/minimize.svg';
+import maximize from './../assets/icons/maximize.svg';
+import cancel from './../assets/icons/cancel.svg';
+import threeDotsHorizontal from './../assets/icons/three-dots-horizontal.svg';
+
+
+// END: ICONS
+
+
 const svgDict = {
   js,
   nodejs,
@@ -69,7 +86,13 @@ const svgDict = {
   webpack,
   jest,
   protactor,
-  karma
+  karma,
+
+  arrowDown,
+  minimize,
+  maximize,
+  cancel,
+  threeDotsHorizontal
 };
 
 export default (props) => (

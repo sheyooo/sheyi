@@ -63,8 +63,8 @@
     }
   }
 
-  &.full-screen &__description {
-    overflow: initial;
+  &.full-screen &__content {
+    overflow: auto;
   }
 
   &.full-screen &__technologies {
@@ -80,16 +80,29 @@
     width: auto;
   }
 
-  &__description {
+  &__content {
     // border-top: #000 solid 2px;
+    overflow: hidden;
     font-size: 20px;
   }
+
+  // &__content {
+    // border-top: #000 solid 2px;
+
+    // overflow: hidden;
+    // font-size: 20px;
+  // }
 
   &__technologies {
     // border-top: #000 solid 2px;
     padding-top: 20px;
     display: none;
     // font-size: 16px;
+  }
+
+  &__expand-button {
+    border-top: #000 solid 2px;
+    cursor: pointer;
   }
 
   &__description::selection {

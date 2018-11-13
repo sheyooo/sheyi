@@ -1,6 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line
-// import Typed from 'typed.js';
 import { Link } from 'react-router-dom';
 
 import Layout from './../layouts/Layout';

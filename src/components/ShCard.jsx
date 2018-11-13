@@ -4,22 +4,25 @@ import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 import './shcard.scss';
 
 import ShSvg from './../components/ShSvg';
+import {OverlayContext} from './OverlayContext';
 
 export default class ShCard extends React.Component {
+
+  static contextType = OverlayContext;
 
   constructor(props) {
     super(props);
 
     this.state = {
       isFullScreen: false
-    }
+    };
   }
 
   componentWillUnmount() {
-    clearAllBodyScrollLocks();
+    clearAllBodyScrollLocks();    
   }
 
-  handleClick = () => {
+  toggleShrink = () => {
     this.setState({
       isFullScreen: !this.state.isFullScreen
     }, () => {
@@ -34,16 +37,28 @@ export default class ShCard extends React.Component {
   render() {
     const state = this.state;
     const props = this.props;
+
     let containerClass = 'p-3 flex flex-col projects-card';
     let iconContainerClass = 'w-1/4 sm:w-1/6 md:w-1/6'; 
 
+    // const c = this.context;
+
     if (state.isFullScreen) {
+    //   console.log('hyyy', state.isFullScreen);
+      
       containerClass += ' full-screen';
-      // iconContainerClass = 'w-1/4 sm:w-1/6 md:w-1/12';
+
+    //   c.onOverlayClick = () => {
+    //     console.log('kjkjlkjlj')
+    //     this.toggleShrink();
+    //     // c.setOverlayStateFn(!c.isOverlayActive);
+    //   }
+    }  else {
+    //   // c.onOverlayClick = null;
     }
 
     return (
-      <div style={{height: '100%'}} className={containerClass}>
+      <div style={{maxHeight: '100%'}} className={containerClass}>
         <div>
           <b>{props.companyName} ({props.companyLocation})</b>
           <p>{props.role}</p>
@@ -65,14 +80,21 @@ export default class ShCard extends React.Component {
             </div>
           </div>
         </div>
+        
+        <OverlayContext.Consumer>
+          {({isOverlayActive, setOverlayStateFn}) => {
+            return (
+              <div onClick={() => { this.toggleShrink(); setOverlayStateFn(!isOverlayActive); }} className="projects-card__expand-button -mx-3 -mb-3">
+                <div className="flex justify-around">
+                  <div style={{width: 40}} className="w-1/4 pt-3">
+                    <ShSvg icon={state.isFullScreen ? 'cancel' : 'threeDotsHorizontal'} />
+                  </div>
+                </div>
+              </div>
+            );
+          }}
+        </OverlayContext.Consumer>
 
-        <div onClick={this.handleClick} className="projects-card__expand-button -mx-3 -mb-3">
-          <div className="flex justify-around">
-            <div style={{width: 40}} className="w-1/4 pt-3">
-              <ShSvg icon={state.isFullScreen ? 'cancel' : 'threeDotsHorizontal'} />
-            </div>
-          </div>
-        </div>
       </div>
     );
   }

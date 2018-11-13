@@ -1,65 +1,65 @@
 @keyframes toFullScreen {
-  0% {
-    transform: scale(0.9, 0.9);
+  from {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: scale(0.8, 0.8) translate(calc(-50% + -10px), calc(-50%  + -10px));
   }
 
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1,1);
-    opacity: 1;
-    z-index: 100;
+  to {
+    transform: scale(1, 1) translate(calc(-50% + -10px), calc(-50%  + -10px));
   }
 }
-
 
 .projects-card {
   box-shadow: 0px 0px 0px #333;
   border: solid 2px black;
   background: white;
-  transition: all 0.2s;
-  cursor: pointer;
+  transition: all 0.1s;
 
   @media only screen and (min-width: 768px) {
     &:hover {
       box-shadow: 10px -10px 0px #333;
       transform: translate(-10px, 10px);
     }
-
-    &:hover.full-screen {
-      box-shadow: none;
-      transform: translate(0px, 0px);
-      cursor: default;
-    }
   }
-
 
   &.full-screen {
     animation-name: toFullScreen;
-    animation-duration: 0.1s;
+    animation-duration: 0.2s;
     animation-fill-mode: both;
 
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
     position: fixed;
     overflow: scroll;
     z-index: 100;
+    box-shadow: 10px -10px 0px #333;
+    left: 50%;
+    top: 50%;
+    transform: scale(1, 1) translate(calc(-50% + -10px), calc(-50%  + -10px));
+  }
+
+
+  // Smaller screens
+  @media only screen and (max-width: 600px) {
+    &.full-screen {
+      animation-name: none;
+      width: 100vw;
+      height: 100vh;
+      transform: scale(1, 1) translate(calc(-50%), calc(-50%));
+    }
   }
 
   @media only screen and (min-width: 600px) {
-    &.full-screen &__description {
-      width: 30%;
-      margin: 0 auto;
+    &.full-screen {
+      width: 60vw;
+      height: 80vh;
+      padding: 50px;
     }
-  
-    &.full-screen &__technologies {
-      width: 30%;
-      margin: 0 auto;
+
+    &.full-screen &__expand-button {
+      margin-left: -50px;
+      margin-right: -50px;
+      margin-bottom: -50px;
     }
   }
 
@@ -71,33 +71,19 @@
     display: initial;
   }
 
-  &.full-screen &__technologies div {
-    justify-content: center;
-  }
-
   &__divider {
     border-top: #000 solid 2px;
     width: auto;
   }
 
   &__content {
-    // border-top: #000 solid 2px;
     overflow: hidden;
     font-size: 20px;
   }
 
-  // &__content {
-    // border-top: #000 solid 2px;
-
-    // overflow: hidden;
-    // font-size: 20px;
-  // }
-
   &__technologies {
-    // border-top: #000 solid 2px;
     padding-top: 20px;
     display: none;
-    // font-size: 16px;
   }
 
   &__expand-button {

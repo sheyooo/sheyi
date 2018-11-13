@@ -22,9 +22,9 @@ const Layout = (props) => (
       <h2 className="mb-10 block page-head" style={{fontWeight: 'lighter'}}>➝ {props.pageHead || 'Hi there 👋🏾'}</h2>
       <div className="flex w-full mx-auto relative">
         {props.children}
-        <div className="hidden md:flex flex-grow justify-end items-start">
+        <div className="right-side-nav hidden md:flex flex-grow justify-end items-start">
           <div className="wow myFadeInLeft flex flex-col items-end ml-10">
-            <NavLink to="/home" style={styles.link}>HOME</NavLink>
+            <NavLink to="/" exact style={styles.link}>HOME</NavLink>
             <span style={{fontSize: 30}}>➝</span>
             <NavLink to="/about" style={styles.Layout}>ABOUT</NavLink>
             <span style={{fontSize: 30}}>➝</span>

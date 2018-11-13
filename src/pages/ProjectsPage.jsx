@@ -2,7 +2,9 @@ import React from 'react';
 import WOW from 'wow.js';
 
 import Layout from './../layouts/Layout';
+
 import ShCard from './../components/ShCard';
+import Emoji from './../components/Emoji';
 
 // import './../styles/projects.scss';
 
@@ -47,14 +49,13 @@ export default class ProjectsPage extends React.Component {
   }
 
   componentDidMount() {
-    // console.log(WOW);
     const wow = new WOW();
     wow.init();
   }
 
   render() {
     return (
-      <Layout pageHead="Work and Projects 👨‍💻">
+      <Layout pageHead={<span>Work and Projects <Emoji symbol='👨‍💻' /></span>}>
         <div className="flex flex-wrap -mx-4">
           {
             projects.map(project => (

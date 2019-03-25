@@ -9,17 +9,24 @@ import Emoji from './../components/Emoji';
 // import './../styles/projects.scss';
 
 const projects = [{
+  companyName: 'Wunderflats',
+  companyLocation: 'BER, DE',
+  role: 'Senior Fullstack Developer',
+  timeline: 'March/2019 - Present',
+  description: 'Wunderflats is housing as a service. Which focuses on providing their customers with furnished apartments. This is a new and interesting challenge for me. ',
+  technologies: ['js', 'mongodb', 'express', 'nodejs', 'react', 'jest', 'webpack', 'mocha', 'twilio', 'jira', 'graphql', 'apollo', 'gcp', 'kubernetes', 'docker']
+},{
   companyName: 'MindRight',
   companyLocation: 'DC, USA',
   role: 'Lead Developer',
-  timeline: 'Jan/2017 - Present',
+  timeline: 'Jan/2017 - Feb/2019',
   description: 'MindRight is personalized, live coaching over text message for teens who want to talk. It\'s a service/company that focuses on mental health and wellbeing of teens (youth) in the underserved parts of USA.',
   technologies: ['js', 'mongodb', 'express', 'nodejs', 'loopback', 'mysql', 'angular', 'rxjs', 'react', 'redux', 'protactor', 'karma', 'jest', 'webpack', 'mocha', 'redis', 'socketio', 'twilio', 'jira', 'graphql', 'apollo', 'gcp', 'kubernetes']
 }, {
   companyName: 'Andela',
   companyLocation: 'NYC, USA',
   role: 'Full Stack Developer',
-  timeline: 'Mar/2016 - Present',
+  timeline: 'Mar/2016 - Feb/2019',
   description: 'Andela is a tech company that recruits top 1% smart young developers in Africa for top IT firms like Microsoft and Google. In my time here, I worked on an internal project during training which was a Yelp clone using PEAN stack (Postgres, Express.js Angular, and Node) and a document management System using MERN stack (MongoDB, Express.js React, Node)',
   technologies: ['js', 'postgresql', 'mongodb', 'express', 'react', 'nodejs', 'angular', 'mocha', 'chai', 'jasmine', 'ruby', 'sinatra', 'jest', 'webpack']
 }, {

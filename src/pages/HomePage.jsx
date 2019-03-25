@@ -14,12 +14,11 @@ export default class HomePage extends React.Component {
           <p className="wow fadeIn mb-5 hero-text">
             <a href="mailto:sheyiadekoya@gmail.com" className="name-in-bio inline-flex">
               <span>I</span><span role="img" aria-label="Email">@</span>
-            </a> am Seyi, a <span className="px-2 pb-1" style={{background: 'rgba(17,119,17,0.8)', color: 'white'}}>Nigerian</span> Techie.
-            I work with <a target="_blank" rel="noreferrer noopener" href="https://wunderflats.com">Wunderflats</a> in Berlin 🇩🇪.
-            I have worked with <a target="_blank" rel="noreferrer noopener" href="https://getmindright.org">MindRight</a> and&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://andela.com">Andela</a>. I founded a startup
-            called <span className="text-pdurple">GradeAccess</span> and
-            co-founded <span className="text-pdurple">Testify</span>. <Link to="/about">Learn more ➝</Link>
+            </a> am <span className="px-2 pb-1" style={{background: 'rgba(17,119,17,0.8)', color: 'white'}}>Seyi</span>,
+            I work at <a target="_blank" rel="noreferrer noopener" href="https://wunderflats.com">Wunderflats</a> in Berlin 🇩🇪.
+            I've worked with <a target="_blank" rel="noreferrer noopener" href="https://getmindright.org">MindRight</a> and&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://andela.com">Andela</a>. I started <span className="text-purple">GradeAccess</span> and
+            co-founded <span className="text-purple">Testify</span>. <Link to="/about">Learn more ➝</Link>
           </p>
         </div>
         {/* <div className="hidden md:flex flex-grow justify-end items-start">

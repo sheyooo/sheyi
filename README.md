@@ -3,6 +3,17 @@
 A responsive developer workspace portfolio combining terminal windows, a career
 timeline, project tabs, a schematic journey illustration, and a printable CV.
 
+## Material design study
+
+The `codex/material-study` branch explores a tactile version of the existing
+design: warm paper, porcelain-like window surfaces, satin title bars, raised
+controls, a green enamel nameplate, and softly recessed project tabs. Purple,
+green, monospace typography, content, and navigation remain shared with the
+original design. The visual layer lives in `src/styles/material.css`.
+
+Preview this branch locally with `npm start`. GitHub Pages continues to deploy
+only `master`, so this experiment does not replace the live design.
+
 ## Run locally
 
 Use Node.js 24 (`nvm use`), then:

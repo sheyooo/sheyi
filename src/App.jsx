@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ResumePage from './pages/ResumePage';
 import './App.css';
+import './styles/material.css';
 
 function PagePosition() {
   const { pathname, hash, key, state } = useLocation();

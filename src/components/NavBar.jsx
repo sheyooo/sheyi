@@ -11,7 +11,7 @@ export default () => (
       <NavLink to="/">
         <img style={{ height: 50, marginRight: 20 }} src={logo} alt="{.sh}" />
       </NavLink>
-      <NavLink exact className="hidden md:inline-block sh-header__nav" to="/">
+      <NavLink end className="hidden md:inline-block sh-header__nav" to="/">
         HOME
       </NavLink>
       <a
@@ -21,7 +21,7 @@ export default () => (
         BLOG
       </a>
       <NavLink
-        exact
+        end
         className="hidden sm:inline-block sh-header__nav"
         to="/about"
       >
@@ -30,9 +30,9 @@ export default () => (
       <NavLink className="hidden sm:inline-block sh-header__nav" to="/projects">
         PROJECTS
       </NavLink>
-      {/* <NavLink className="sh-header__nav" to="/resume">
-        RESUMÉ
-      </NavLink> */}
+      <NavLink className="hidden sm:inline-block sh-header__nav" to="/resume">
+        CV
+      </NavLink>
 
       {/* <NavLink className="sh-header__nav" to="/next">
         ->

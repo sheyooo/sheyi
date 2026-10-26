@@ -1,78 +1,9 @@
 import React from 'react';
-import WOW from 'wow.js';
+import Layout from '../layouts/Layout';
+import Window from '../components/workspace/Window';
+import Timeline from '../components/workspace/Timeline';
+import ProjectWindow from '../components/workspace/ProjectWindow';
 
-import Layout from './../layouts/Layout';
-
-import ShCard from './../components/ShCard';
-import Emoji from './../components/Emoji';
-
-// import './../styles/projects.scss';
-
-const projects = [{
-  companyName: 'Wunderflats',
-  companyLocation: 'BER, DE',
-  role: 'Senior Fullstack Developer',
-  timeline: 'March/2019 - Present',
-  description: 'Wunderflats is housing as a service. Which focuses on providing their customers with furnished apartments. This is a new and interesting challenge for me. ',
-  technologies: ['js', 'mongodb', 'express', 'nodejs', 'react', 'jest', 'webpack', 'mocha', 'twilio', 'jira', 'graphql', 'apollo', 'gcp', 'kubernetes', 'docker']
-},{
-  companyName: 'MindRight',
-  companyLocation: 'DC, USA',
-  role: 'Lead Developer',
-  timeline: 'Jan/2017 - Feb/2019',
-  description: 'MindRight is personalized, live coaching over text message for teens who want to talk. It\'s a service/company that focuses on mental health and wellbeing of teens (youth) in the underserved parts of USA.',
-  technologies: ['js', 'mongodb', 'express', 'nodejs', 'loopback', 'mysql', 'angular', 'rxjs', 'react', 'redux', 'protactor', 'karma', 'jest', 'webpack', 'mocha', 'redis', 'socketio', 'twilio', 'jira', 'graphql', 'apollo', 'gcp', 'kubernetes']
-}, {
-  companyName: 'Andela',
-  companyLocation: 'NYC, USA',
-  role: 'Full Stack Developer',
-  timeline: 'Mar/2016 - Feb/2019',
-  description: 'Andela is a tech company that recruits top 1% smart young developers in Africa for top IT firms like Microsoft and Google. In my time here, I worked on an internal project during training which was a Yelp clone using PEAN stack (Postgres, Express.js Angular, and Node) and a document management System using MERN stack (MongoDB, Express.js React, Node)',
-  technologies: ['js', 'postgresql', 'mongodb', 'express', 'react', 'nodejs', 'angular', 'mocha', 'chai', 'jasmine', 'ruby', 'sinatra', 'jest', 'webpack']
-}, {
-  companyName: 'Testify',
-  companyLocation: 'LOS, NG',
-  role: 'Full Stack Developer and Co-Founder',
-  timeline: 'Sep/2015 - Feb/2016',
-  description: 'Testify is a Christian social network where people can come and post their testimonies and others can interact with the posters and also relate with their testimonies.',
-  technologies: ['laravel', 'angular', 'js', 'ionic', 'php', 'mysql', 'socketio']
-}, {
-  companyName: 'GradeAccess',
-  companyLocation: 'LOS, NG',
-  role: 'Full Stack Developer and Founder',
-  timeline: 'Feb/2014 - Feb/2015',
-  description: 'GradeAccess is a service that helps parents to stay up to date with their child\'s academic performance in school, knowing how difficult it is to keep an eye on their children. This is done by gathering data from the class teachers of the students.',
-  technologies: ['php', 'mysql', 'js', 'aws', 'bootstrap']
-}];
-
-export default class ProjectsPage extends React.Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isFullScreen: false
-    }
-  }
-
-  componentDidMount() {
-    const wow = new WOW();
-    wow.init();
-  }
-
-  render() {
-    return (
-      <Layout pageHead={<span>Work and Projects <Emoji symbol='👨‍💻' /></span>}>
-        <div className="flex flex-wrap -mx-4">
-          {
-            projects.map(project => (
-              <div key={project.companyName} style={{height: 410}} className="p-4 w-full sm:w-1/2 lg:w-1/3">
-                <ShCard {...project} />
-              </div>
-            ))
-          }
-        </div>
-      </Layout>
-    )
-  }
+export default function ProjectsPage() {
+  return <Layout pageHead="Work & projects" pageClass="projects-page"><p className="page-intro">Different challenges. The same curiosity.<br />A few places I’ve worked, and things I’ve helped build.</p><ProjectWindow detailed /><Window title="experience.log" id="experience" className="full-experience-window"><div className="window-intro"><h2>People. Products. Places.</h2><p>The full journey — including development, leadership, and mentoring.</p></div><Timeline full /></Window></Layout>;
 }

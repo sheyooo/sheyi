@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import './legacy-preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
 
 body {
   margin: 0;
@@ -11,8 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@tailwind preflight;
-@tailwind utilities;
+
 
 
 /* Your custom CSS here */

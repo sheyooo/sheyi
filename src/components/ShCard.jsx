@@ -13,6 +13,8 @@ export default class ShCard extends React.Component {
   constructor(props) {
     super(props);
 
+    this.contentRef = React.createRef();
+
     this.state = {
       isFullScreen: false
     };
@@ -27,7 +29,7 @@ export default class ShCard extends React.Component {
       isFullScreen: !this.state.isFullScreen
     }, () => {
       if (this.state.isFullScreen) {
-        disableBodyScroll();
+        disableBodyScroll(this.contentRef.current);
       } else {
         clearAllBodyScrollLocks();
       }
@@ -60,13 +62,14 @@ export default class ShCard extends React.Component {
     return (
       <div style={{maxHeight: '100%'}} className={containerClass}>
         <div>
-          <b>{props.companyName} ({props.companyLocation})</b>
+          <b>{props.companyName}{props.companyLocation ? ` (${props.companyLocation})` : ''}</b>
           <p>{props.role}</p>
           <small>{props.timeline}</small>
         </div>
         <div className="projects-card__divider"></div>
-        <div className="projects-card__content flex flex-col flex-grow">
+        <div ref={this.contentRef} className="projects-card__content flex flex-col grow">
           <p className="projects-card__description">{props.description}</p>
+          {state.isFullScreen && props.extraContent}
 
           <div className="projects-card__technologies">
             <div className="flex flex-wrap">

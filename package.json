@@ -2,46 +2,36 @@
   "name": "sheyi",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build && node scripts/prepare-static-routes.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build:pages": "vite build --base=/sheyi/ && node scripts/prepare-static-routes.mjs"
+  },
   "dependencies": {
-    "animate.css": "^3.7.0",
-    "body-scroll-lock": "^2.5.10",
-    "bootstrap": "^4.1.3",
-    "node-sass": "^4.10.0",
-    "react": "^16.6.1",
-    "react-content-loader": "^3.2.0",
-    "react-dom": "^16.6.1",
-    "react-helmet": "^5.2.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
-    "reactstrap": "^6.5.0",
-    "tailwindcss": "^0.7.2",
-    "typed.js": "^2.0.9",
+    "animate.css": "^4.1.1",
+    "body-scroll-lock": "^3.1.5",
+    "react": "^19.3.1",
+    "react-content-loader": "^7.1.2",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4",
     "wow.js": "^1.2.2"
   },
-  "scripts": {
-    "build:css": "postcss src/styles/index.css -o src/index.css",
-    "watch:css": "postcss src/styles/index.css -o src/index.css -w",
-    "start": "npm run watch:css & react-scripts start",
-    "build": "npm run build:css && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "devDependencies": {
-    "autoprefixer": "^9.3.1",
-    "postcss-cli": "^6.0.1",
-    "react-snap": "^1.19.0"
+    "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "^30.1.3",
+    "sass": "^1.106.1",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5",
+    "@tailwindcss/vite": "^4.3.3"
   },
   "engines": {
-    "node": ">=10.11.0"
-  }
+    "node": ">=22.12.0"
+  },
+  "packageManager": "npm@11.13.0"
 }

@@ -1,59 +1,11 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+import Layout from '../layouts/Layout';
+import Window from '../components/workspace/Window';
+import Toolbox from '../components/workspace/Toolbox';
+import { JourneyMap } from '../components/workspace/Illustrations';
+import { education, certification, profile } from '../data/profile';
 
-import Layout from './../layouts/Layout';
-import Emoji from '../components/Emoji';
-
-// import picture from './../assets/professional-picture.jpg';
-
-const styles = {
-  spanTerminal: {
-    background: '#333',
-    color: 'wheat'
-  }
-};
-
-export default class AboutPage extends React.Component {
-  render() {
-    const whoAmI = (
-      <div className="inline-flex cursor-pointer">
-        <span className="name-in-bio inline-flex mr-5">
-          <span style={styles.spanTerminal}>
-            <code>$ whoami</code>
-            <code style={{verticalAlign: 'middle'}} className="blinkingCursor">█</code>
-            &nbsp;
-          </span>
-          <span>Who Am I?</span>
-        </span> 🕵️
-      </div>
-    );
-
-    return (
-      <Layout pageHead={whoAmI}>
-        <div className="w-full md:w-3/5">
-          <p  className="wow fadeIn mb-10 sub-hero-text">
-            I'm a fun HomoSapien<Emoji symbol="❤️" />. Wrote my first piece of code about 7 years ago. I have been coding with JavaScript for close to 4 years.
-          </p>
-          <p className="wow fadeIn mb-10 sub-hero-text">
-            I'm most proud of my achievements with MindRight, a product that serves schools and thousands of teens in the USA, thanks to my contributions as the Lead Developer. 
-          </p>
-          <p className="wow fadeIn mb-10 sub-hero-text">
-            Some of my interests lie in Blockchain <Emoji symbol="⛓️" />, ML <Emoji symbol="🤖" />, and AI <Emoji symbol="🧠" />.
-            In my spare time, I enjoy solving code challenges on HackerRank, Codility, and CodeWars.
-          </p>
-          <p className="wow fadeIn mb-10 sub-hero-text">
-            When I'm not coding, you'll find me spending time with loved ones, playing video games <Emoji symbol="🎮" /> (FIFA) or doing some other creative things like music <Emoji symbol="🎹" /> and photography  <Emoji symbol="📸" />.&nbsp;
-            <Link to="/projects">What I've been up to ➝</Link>
-          </p>
-        </div>
-        {/* <div className="hidden md:flex flex-grow justify-end items-start">
-          <div className="w-1/3 flex-no-grow">
-            <img src={picture} alt="Seyi Adekoya"/>
-          </div>
-        </div> */}
-
-      </Layout>
-    )
-  }
+export default function AboutPage() {
+  return <Layout pageHead={<><span className="command-heading">$ whoami</span><span className="heading-cursor" aria-hidden="true">▏</span></>} pageClass="about-page"><p className="page-intro">An engineer. A mentor. A builder.<br />Always a human.</p><div className="about-grid"><Window title="about-me.md"><div className="prose"><h2>Hi, I’m Seyi.</h2><p>I’m a software engineer based in Berlin, with roots in Nigeria and experience building products across healthcare, housing, education, and community.</p><p>I enjoy the whole journey: understanding a problem, working through the details, and making something useful. Along the way, I’ve founded products, led development, and mentored other developers.</p><p>I currently work at Redcare Pharmacy, after roles at Doctolib and Wunderflats. At MindRight Health, I led development of a text-based coaching product serving young people and schools in the United States.</p><p>Beyond the keyboard, you’ll find me making music, taking photographs, playing video games, or spending time with the people I love.</p><Link className="text-link" to="/projects#experience">Explore my experience →</Link></div></Window><div className="about-aside"><Window title="roots-and-routes.svg"><div className="whoami-copy"><h3>From Nigeria to Berlin.</h3><p>Building things. Connecting dots.</p></div><JourneyMap /></Window><Window title="education.txt"><div className="prose compact-prose"><h3>{education.school}</h3><p>{education.dates}</p></div></Window><Window title="recognition.txt"><div className="prose compact-prose"><h3>{certification.name}</h3><p>{certification.issuer} · {certification.date}</p></div></Window></div></div><Toolbox /><div className="about-contact"><p>Curious about the rest?</p><a className="text-link" href={profile.linkedin} target="_blank" rel="noopener noreferrer">Find me on LinkedIn ↗</a><Link className="text-link" to="/resume">View my CV →</Link></div></Layout>;
 }

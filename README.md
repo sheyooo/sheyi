@@ -1,44 +1,61 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Seyi Adekoya — portfolio & CV
 
-## Available Scripts
+A responsive developer workspace portfolio combining terminal windows, a career
+timeline, project tabs, a schematic journey illustration, and a printable CV.
 
-In the project directory, you can run:
+## Run locally
 
-### `npm start`
+Use Node.js 24 (`nvm use`), then:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```sh
+npm ci
+npm start
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Open http://127.0.0.1:3000.
 
-### `npm test`
+## Check and build
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm test
+npm run build
+npm run preview
+```
 
-### `npm run build`
+Vite writes production files to `build/`. Netlify’s SPA fallback preserves direct
+links to `/about`, `/projects`, and `/resume`. A project can be shared with a URL
+such as `/projects?project=mindright#selected-work`. Workplace names in the
+experience timeline open their matching details in selected work.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Content and implementation
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- `src/data/profile.js`: shared verified work history, projects, skills, education.
+- `src/components/workspace`: terminal windows, illustrations, timeline, tabs,
+  and toolbox. Windows collapse and maximize; Escape restores expanded windows.
+- `src/layouts/Layout.jsx`: shared desktop/mobile navigation and footer.
+- `src/App.css`: responsive layout, original typography, and reduced-motion rules.
+- `src/pages/resume.css`: CV presentation and print layout.
+- `CONTENT_SOURCES.md`: content sources and limits.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Project tabs support arrow keys, Home, and End. The mobile menu and expanded
+windows support Escape. The layout stacks at phone widths and only the project
+tab strip scrolls horizontally. Contact actions open email. Google Fonts have
+monospace system fallbacks. No backend or extra integration is required.
 
-### `npm run eject`
+The application uses React 19, React Router 7, and Vite 8. Earlier source
+components are retained for reference but are not loaded by the current app.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## GitHub Pages
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The `Deploy portfolio to GitHub Pages` workflow tests, builds, and deploys every
+push to `master`. In GitHub Settings → Pages, the publishing source must be
+**GitHub Actions**. The project URL is https://sheyooo.github.io/sheyi/.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+npm run build:pages
+npm run preview
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Pages build uses `/sheyi/` for asset URLs and client-side routing. Static
+entry documents for About, Projects, and CV make direct URLs and refreshes work.
+The ordinary `npm run build` still targets `/` for local or other static hosting.

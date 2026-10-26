@@ -6,10 +6,11 @@ timeline, project tabs, a schematic journey illustration, and a printable CV.
 ## Material design study
 
 The `codex/material-study` branch explores a tactile version of the existing
-design: warm paper, porcelain-like window surfaces, satin title bars, raised
-controls, a green enamel nameplate, and softly recessed project tabs. Purple,
+design: matte cardstock, visible laminated cut edges, paper window strips,
+layered controls, a green paper nameplate, and stacked project tabs. Purple,
 green, monospace typography, content, and navigation remain shared with the
-original design. The visual layer lives in `src/styles/material.css`.
+original design. The visual layer lives in `src/styles/material.css`, with a
+local SVG grain texture in `src/assets/paper-grain.svg`.
 
 Preview this branch locally with `npm start`. GitHub Pages continues to deploy
 only `master`, so this experiment does not replace the live design.

@@ -1,21 +1,23 @@
 import React from 'react';
+import { journeyMap } from '../../data/journey-map';
 
 export function JourneyMap() {
-  return <svg className="journey-map" viewBox="0 0 510 270" role="img" aria-labelledby="journey-map-title">
-    <title id="journey-map-title">Roots in Nigeria, based in Berlin</title>
+  const titleId = React.useId();
+  const descriptionId = React.useId();
+  const [nigeriaX, nigeriaY] = journeyMap.nigeriaMarker;
+  const [berlinX, berlinY] = journeyMap.berlinMarker;
+  return <svg className="journey-map" viewBox="0 0 510 270" role="img" aria-labelledby={titleId} aria-describedby={descriptionId}>
+    <title id={titleId}>Roots in Nigeria, based in Berlin</title>
+    <desc id={descriptionId}>Geographic outlines of Africa and Europe from Natural Earth, shown as separate insets at different scales. Nigeria and Germany are highlighted, with a dotted connection from Nigeria to Berlin.</desc>
     <g className="map-land" strokeLinejoin="round">
-      <path d="m80 113 17-10 25-3 20 3 18 16 25 3 18 15 14 16 20 8-8 17-18 11-4 23-13 25-15 13-13-6-12-24-8-30-19-4-9-16-16-5-11-16-1-14Z" />
-      <path d="m230 220-4 13 1 14 8-8 3-16Z" />
-      <path d="m287 74 3-12 13 3 5 10-9 10-11-2Z m-14 13 7-2 4 9-7 4-6-5Z" />
-      <path d="m324 62 3-12 8-15 1-14 9-11 8 4-7 17-2 20-9 16-8 3Z m17 2 11-16 2-21 12-8 7 8-8 13-2 17-13 17Z" />
-      <path d="m317 87 4-11 12-1 12 3 10-4 15 6 13 8 17-1 21 11 3 15-18 3-14-5-11 7-13-5-9 3 7 13 12 11 6 16-7 2-10-17-11-6-6-13-15-2-2 9-22-1-12-12 4-12-9-6Z" />
-      <path d="m337 134 10 1 2 9-6 7-12-1-9 6-10-4-9 3-5-9 12-6 13 1Z" />
-      <path d="m392 138 10 4 11 17-5 10-9-12-8-5Z" />
+      <path d={journeyMap.africa} />
+      <path d={journeyMap.europe} />
     </g>
-    <path className="journey-route" d="M148 162C190 82 257 74 350 94" />
-    <g className="map-airplane" transform="translate(245 89) rotate(-11)"><path d="m-13 0 12-3 2-10 4-2v12l11 2v4L5 4 2 12h-3l-1-9-11 1Z" /></g>
-    <circle className="map-dot" cx="148" cy="162" r="6" /><circle className="map-dot" cx="350" cy="94" r="6" />
-    <text x="162" y="184">Nigeria</text><text x="365" y="98">Berlin</text>
+    <g className="map-country" strokeLinejoin="round"><path d={journeyMap.nigeria} /><path d={journeyMap.germany} /></g>
+    <path className="journey-route" d={`M${nigeriaX} ${nigeriaY}C170 55 250 48 ${berlinX} ${berlinY}`} />
+    <g className="map-airplane" transform="translate(225 72) rotate(-8)"><path d="m-13 0 12-3 2-10 4-2v12l11 2v4L5 4 2 12h-3l-1-9-11 1Z" /></g>
+    <circle className="map-dot" cx={nigeriaX} cy={nigeriaY} r="5" /><circle className="map-dot" cx={berlinX} cy={berlinY} r="5" />
+    <text className="map-location-label" x={nigeriaX + 13} y={nigeriaY + 25}>Nigeria</text><text className="map-location-label" x={berlinX + 13} y={berlinY + 5}>Berlin</text>
     <path className="map-annotation" d="m445 198 5-15m6 20 12-11m-1 24 15-2" />
   </svg>;
 }

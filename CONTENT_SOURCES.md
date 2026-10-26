@@ -17,4 +17,6 @@ Redcare and Doctolib role descriptions remain intentionally brief because detail
 
 Edit `src/data/profile.js` to update the shared portfolio and CV content. The CV is an HTML route (`/resume`) with print styles and the browser’s Print / save PDF action.
 
-The implemented visual design follows the user-approved combination of the developer workspace and career story concepts, with a responsive mobile layout. Original monospace typography, purple branding, green name highlight, and curly-brace navigation are retained. The map is a decorative, schematic illustration of roots in Nigeria and a base in Berlin.
+The implemented visual design follows the user-approved combination of the developer workspace and career story concepts, with a responsive mobile layout. Original monospace typography, purple branding, green name highlight, and curly-brace navigation are retained.
+
+Map outlines use Natural Earth's public-domain 1:110m geographic region polygons and country boundaries: https://www.naturalearthdata.com/. `scripts/generate-journey-map.py` projects Africa and Europe as separate orthographic insets at different scales, including Madagascar, the British Isles, and Iceland. Country highlights and markers use the same projections as the coastlines. Berlin uses 13.4050° E, 52.5200° N; Nigeria uses a country-level reference point at 8.6753° E, 9.0820° N, without implying a hometown. Generated paths are bundled locally in `src/data/journey-map.js`; the decorative connection does not represent a flight route or geographic distance.

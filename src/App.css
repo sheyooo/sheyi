@@ -107,6 +107,8 @@ img, svg { max-width: 100%; }
 .whoami-copy p { font-size: 17px; line-height: 1.6; }
 .journey-map { display: block; width: calc(100% - 24px); margin: -3px auto -8px; max-height: 245px; }
 .map-land { fill: none; stroke: #b8b4c1; stroke-width: 1.2; }
+.map-country { fill: #efe7f7; stroke: var(--purple); stroke-width: 0.9; }
+.map-location-label { paint-order: stroke; stroke: white; stroke-width: 4px; stroke-linejoin: round; }
 .journey-route { fill: none; stroke: var(--purple); stroke-width: 2; stroke-dasharray: 8 7; animation: journey-flow 30s linear infinite; }
 .map-airplane { fill: var(--purple); }
 .map-dot { fill: var(--purple); stroke: white; stroke-width: 2; }
